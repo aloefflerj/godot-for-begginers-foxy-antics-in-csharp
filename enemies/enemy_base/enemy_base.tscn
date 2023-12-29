@@ -1,0 +1,19 @@
+[gd_scene load_steps=2 format=3 uid="uid://dp1orin8y4lux"]
+
+[ext_resource type="Script" path="res://enemies/enemy_base/enemy_base.cs" id="1_ptwbe"]
+
+[node name="EnemyBase" type="CharacterBody2D"]
+collision_layer = 0
+script = ExtResource("1_ptwbe")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+
+[node name="HitBox" type="Area2D" parent="."]
+collision_layer = 4
+collision_mask = 8
+
+[connection signal="screen_entered" from="VisibleOnScreenNotifier2D" to="." method="OnVisibleOnScreenNotifier2dScreenEntered"]
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="OnVisibleOnScreenNotifier2dScreenExited"]
+[connection signal="area_entered" from="HitBox" to="." method="OnHitBoxAreaEntered"]

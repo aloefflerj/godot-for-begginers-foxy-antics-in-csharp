@@ -1,0 +1,63 @@
+[gd_scene load_steps=7 format=3 uid="uid://dhnbpdbnongd"]
+
+[ext_resource type="Script" path="res://main/main.cs" id="1_n4n0v"]
+[ext_resource type="Texture2D" uid="uid://c33y22hltivo1" path="res://assets/backgrounds/platformer_background_4.png" id="1_yn8w5"]
+[ext_resource type="FontFile" uid="uid://fogtv5ru7dhb" path="res://assets/fonts/LuckiestGuy-Regular.ttf" id="2_ilxwd"]
+[ext_resource type="AudioStream" uid="uid://cetqlifgw3qvv" path="res://assets/sound/Farm Frolics.ogg" id="3_x7re4"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_iyrxi"]
+font = ExtResource("2_ilxwd")
+font_size = 96
+font_color = Color(0.105882, 0.52549, 0.894118, 1)
+outline_size = 9
+outline_color = Color(0, 0.121569, 0.0588235, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_lvra0"]
+font = ExtResource("2_ilxwd")
+font_size = 32
+font_color = Color(0.631373, 0.854902, 0.996078, 1)
+outline_size = 8
+outline_color = Color(0, 0.172549, 0.0901961, 1)
+
+[node name="Main" type="CanvasLayer"]
+script = ExtResource("1_n4n0v")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_yn8w5")
+expand_mode = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -182.5
+offset_top = -32.0
+offset_right = 182.5
+offset_bottom = 32.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "FOXY ANTICS"
+label_settings = SubResource("LabelSettings_iyrxi")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="LabelHighScore" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "Highscore: 0000"
+label_settings = SubResource("LabelSettings_lvra0")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_x7re4")
+autoplay = true

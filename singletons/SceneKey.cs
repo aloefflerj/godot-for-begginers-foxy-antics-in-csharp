@@ -1,0 +1,1 @@
+public enum SceneKey { Explosion, Pickup };

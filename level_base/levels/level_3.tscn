@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=3 uid="uid://c7dlndavm28ay"]
+
+[ext_resource type="PackedScene" uid="uid://cq460tjyey3p0" path="res://level_base/level_base.tscn" id="1_fiwol"]
+[ext_resource type="PackedScene" uid="uid://dkimxk2y4doyr" path="res://enemies/eagle/eagle.tscn" id="2_ts2e7"]
+[ext_resource type="PackedScene" uid="uid://ds5kl0dwadmw6" path="res://enemies/frog/frog.tscn" id="3_cuf5x"]
+[ext_resource type="PackedScene" uid="uid://dxgwthpe4a3aw" path="res://floor_spikes/floor_spikes.tscn" id="4_d4j7f"]
+
+[node name="Level3" instance=ExtResource("1_fiwol")]
+
+[node name="TileMap" parent="." index="1"]
+layer_0/tile_data = PackedInt32Array(-3, 458752, 0, -2, 458752, 0, -1, 458752, 0, -65536, 458752, 0, -65535, 458752, 0, -65534, 458752, 0, -65533, 458752, 0, -65532, 458752, 0, -65530, 458752, 0, -65529, 458752, 0, -65528, 458752, 0, -65527, 458752, 0, -65526, 458752, 0, -65525, 458752, 0, -65524, 458752, 0, -65523, 458752, 0, -65522, 458752, 0, -65521, 458752, 0, -589811, 393216, 0, -589810, 458752, 0, -589809, 524288, 0, -720887, 393216, 0, -720886, 458752, 0, -720885, 524288, 0, -851963, 393216, 0, -851962, 458752, 0, -851961, 524288, 0, -983029, 393216, 0, -983028, 458752, 0, -983027, 524288, 0, -1114097, 393216, 0, -4, 458752, 0, -327696, 458752, 0, -16, 458752, 0, -327695, 458752, 0, -15, 458752, 0, -262158, 458752, 0, -14, 458752, 0, -262157, 458752, 0, -13, 458752, 0, -196620, 458752, 0, -12, 458752, 0, -196619, 458752, 0, -11, 458752, 0, -10, 458752, 0, -9, 458752, 0, -8, 458752, 0, -7, 458752, 0, -6, 458752, 0, -5, 458752, 0, -65520, 458752, 0, -65519, 458752, 0, -65518, 458752, 0, -65517, 458752, 0, -65516, 458752, 0, -65515, 458752, 0, -65514, 458752, 0, -65513, 458752, 0, -65512, 458752, 0, -65511, 458752, 0, -65510, 458752, 0, -65509, 458752, 0, -65508, 458752, 0, -65507, 458752, 0, -65506, 458752, 0, -65505, 458752, 0, -65504, 458752, 0, -65503, 458752, 0, -65502, 458752, 0, -65501, 458752, 0, -65500, 458752, 0, -65499, 458752, 0, -65498, 458752, 0, -65497, 458752, 0, -65496, 458752, 0, -65495, 458752, 0, -65494, 458752, 0, -65493, 458752, 0, -65492, 458752, 0, -65491, 458752, 0, -65490, 458752, 0, -1114096, 458752, 0, -1114095, 524288, 0)
+
+[node name="Eagle" parent="." index="10" instance=ExtResource("2_ts2e7")]
+position = Vector2(273, -287)
+
+[node name="Frog" parent="." index="11" instance=ExtResource("3_cuf5x")]
+position = Vector2(198, -250)
+
+[node name="FloorSpikes" parent="." index="12" instance=ExtResource("4_d4j7f")]
+position = Vector2(266, -12)
+
+[node name="FloorSpikes2" parent="." index="13" instance=ExtResource("4_d4j7f")]
+position = Vector2(283, -12)
+
+[node name="FloorSpikes3" parent="." index="14" instance=ExtResource("4_d4j7f")]
+position = Vector2(300, -12)

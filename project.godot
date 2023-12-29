@@ -1,0 +1,70 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="Foxy Antics"
+run/main_scene="res://main/main.tscn"
+config/features=PackedStringArray("4.2", "C#", "Mobile")
+
+[autoload]
+
+SignalManager="*res://singletons/signal_manager.cs"
+ScoreManager="*res://singletons/score_manager.cs"
+SoundManager="*res://singletons/sound_manager.cs"
+GameManager="*res://singletons/game_manager.cs"
+ObjectMaker="*res://singletons/object_maker.cs"
+
+[display]
+
+window/size/viewport_width=1024
+window/size/viewport_height=600
+window/stretch/mode="canvas_items"
+
+[dotnet]
+
+project/assembly_name="Foxy Antics"
+
+[input]
+
+left={
+"deadzone": 0.5,
+"events": [Object(InputEventJoypadMotion,"resource_local_to_scene":false,"resource_name":"","device":-1,"axis":0,"axis_value":-1.0,"script":null)
+]
+}
+right={
+"deadzone": 0.5,
+"events": [Object(InputEventJoypadMotion,"resource_local_to_scene":false,"resource_name":"","device":-1,"axis":0,"axis_value":1.0,"script":null)
+]
+}
+jump={
+"deadzone": 0.5,
+"events": [Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"button_index":0,"pressure":0.0,"pressed":true,"script":null)
+]
+}
+shoot={
+"deadzone": 0.5,
+"events": [Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"button_index":2,"pressure":0.0,"pressed":true,"script":null)
+]
+}
+
+[layer_names]
+
+2d_physics/layer_1="platforms"
+2d_physics/layer_2="playerHitBox"
+2d_physics/layer_3="enemyHitBox"
+2d_physics/layer_4="playerBullet"
+2d_physics/layer_5="enemyBullet"
+2d_physics/layer_6="playerPhysics"
+
+[rendering]
+
+textures/canvas_textures/default_texture_filter=0
+renderer/rendering_method="mobile"
